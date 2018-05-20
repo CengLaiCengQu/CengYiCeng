@@ -17,4 +17,5 @@
         app:itemIconTint="@android:color/holo_purple"
         app:itemTextColor="@android:color/black"
         app:menu="@menu/nav_menu"/>
+
 </RelativeLayout>

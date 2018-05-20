@@ -5,7 +5,7 @@
         android:icon="@drawable/ic_home_black_24dp"
         android:title="rubrub" />
     <item
-        android:id="@+id/neigubour"
+        android:id="@+id/neighbour"
         android:icon="@drawable/ic_people_black_24dp"
         android:title="discuss" />
     <item
