@@ -19,7 +19,9 @@ import cn.bmob.v3.Bmob;
 import android.app.Activity;
 import android.os.Bundle;
 
-
+import cn.bmob.v3.Bmob;
+import android.app.Activity;
+import android.os.Bundle;
 public class MainActivity extends AppCompatActivity {
 
 private BottomNavigationView bottomNavigationView;
@@ -46,34 +48,36 @@ private BottomNavigationView bottomNavigationView;
                 list.add(announcementFragment);
                 list.add(neighbourFragment);
                 list.add(meFragment);
+
+
                 switch (item.getItemId()) {
                     case R.id.search:
-                        fragment = new SearchFragment();
-                        transaction.replace(R.id.search,fragment);
-                        transaction.commit();
-                        //Intent intent =new Intent(MainActivity.this,SearchActivity.class);
-                        //startActivity(intent);
+                     //   fragment = new SearchFragment();
+                     //   transaction.replace(R.id.search,fragment);
+                     //   transaction.commit();
+                        Intent intent =new Intent(MainActivity.this,SearchActivity.class);
+                        startActivity(intent);
                         break;
                     case R.id.neighbour:
                         //fragment = new NeighbourFragment();
                         //transaction.replace(R.id.neighbour,fragment);
                         //transaction.commit();
-                        //Intent intent1 =new Intent(MainActivity.this,NeighbourActivity.class);
-                        //startActivity(intent1);
+                        Intent intent1 =new Intent(MainActivity.this,NeighbourActivity.class);
+                        startActivity(intent1);
                         break;
                     case R.id.board:
                         //fragment =new AnnouncementFragment();
                         //transaction.replace(R.id.board,fragment);
                         //transaction.commit();
-                        //Intent intent2 =new Intent(MainActivity.this,AnnouncementActivity.class);
-                        //startActivity(intent2);
+                        Intent intent2 =new Intent(MainActivity.this,AnnouncementActivity.class);
+                        startActivity(intent2);
                         break;
                     case R.id.me:
                         //fragment = new MeFragment();
                         //transaction.replace(R.id.me,fragment);
                         //transaction.commit();
-                        //Intent intent3 =new Intent(MainActivity.this,MeActivity.class);
-                        //startActivity(intent3);
+                        Intent intent3 =new Intent(MainActivity.this,MeActivity.class);
+                        startActivity(intent3);
                         break;
                 }
                 return true;
