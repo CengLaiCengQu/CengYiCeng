@@ -7,20 +7,31 @@ import android.view.*;
 import android.net.Uri;
 
 public class AnnouncementActivity extends AppCompatActivity {
-    private Button button;
+    private Button button1;
+    private Button button2;
  @Override
     protected void onCreate(android.os.Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.announcement_xml);
-        button = (Button) findViewById(R.id.jump1);
-        button.setOnClickListener(new View.OnClickListener(){
-        @Override
-        public void onClick(View v){
-        Intent intent =new Intent(Intent.ACTION_VIEW);
-        intent.setData(Uri.parse("http://www.baidu.com"));
-        startActivity(intent);
-        }
-        });
-    }
+        button1 = (Button) findViewById(R.id.jump1);
+        button1.setOnClickListener(new View.OnClickListener() {
+                                       @Override
+                                       public void onClick(View v) {
+                                           Intent intent = new Intent(Intent.ACTION_VIEW);
+                                           intent.setData(Uri.parse("http://www.baidu.com"));
+                                           startActivity(intent);
+                                       }
+                                   }
+        );
 
+    button2 = (Button) findViewById(R.id.jump2);
+     button2.setOnClickListener(new View.OnClickListener() {
+         @Override
+         public void onClick(View v) {
+             Intent intent = new Intent(Intent.ACTION_VIEW);
+             intent.setData(Uri.parse("http://www.hzau.com"));
+             startActivity(intent);
+         }
+     });
+    }
 }
