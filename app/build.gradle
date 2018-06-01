@@ -8,7 +8,7 @@ android {
         }
     }
     compileSdkVersion 27
-    buildToolsVersion '22.0.1'
+    buildToolsVersion '26.0.2'
     defaultConfig {
         applicationId "com.example.rubrub"
         minSdkVersion 21
@@ -30,7 +30,7 @@ dependencies {
     //noinspection GradleCompatible
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
-    implementation 'com.android.support:support-v4:27.1.1'
+  //  implementation 'com.android.support:support-v4:27.1.1'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
@@ -40,6 +40,9 @@ dependencies {
     compile 'com.android.support:design:27.1.1'
     compile 'de.hdodenhof:circleimageview:2.1.0'
     compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile ('com.android.support:appcompat-v7:23.0.1'){
+        exclude module :'support-v4' //从v7中排除v4
+    }
 
     //以下SDK开发者请根据需要自行选择
     //bmob-sdk：Bmob的android sdk包，包含了Bmob的数据存储、文件等服务，以下是最新的bmob-sdk:
@@ -54,6 +57,6 @@ dependencies {
 
     //如果你想应用能够兼容Android6.0，请添加此依赖(org.apache.http.legacy.jar)
     compile 'cn.bmob.android:http-legacy:1.0'
-
-
+    //短信服务
+    compile 'cn.bmob.android:bmob-sms:1.0.1'//
 }
