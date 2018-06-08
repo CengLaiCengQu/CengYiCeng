@@ -5,6 +5,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.rubrub.Fragment.AnnouncementFragment">
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/jump1"
+        android:text="百度一下"/>
+
+    <Button
+        android:id="@+id/jump2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="华农教务处" />
 
 
 </LinearLayout>

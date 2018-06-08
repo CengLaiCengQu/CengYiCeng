@@ -1,4 +1,4 @@
-package com.example.rubrub;
+package com.example.rubrub.Activity;
 
 import android.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -7,6 +7,8 @@ import android.widget.Button;
 import android.content.Intent;
 import android.view.*;
 import android.net.Uri;
+
+import com.example.rubrub.R;
 
 public class AnnouncementActivity extends FragmentActivity {
     private Button button1;

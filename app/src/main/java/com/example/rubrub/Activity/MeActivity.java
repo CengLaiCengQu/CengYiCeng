@@ -1,7 +1,9 @@
-package com.example.rubrub;
+package com.example.rubrub.Activity;
 import android.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
+
+import com.example.rubrub.R;
 
 public class MeActivity  extends FragmentActivity {
 
