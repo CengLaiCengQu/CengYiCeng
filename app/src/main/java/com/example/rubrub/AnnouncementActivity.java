@@ -35,5 +35,6 @@ public class AnnouncementActivity extends FragmentActivity {
              startActivity(intent);
          }
      });
+
     }
 }

@@ -2,8 +2,57 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.rubrub.Fragment.NeighbourFragment">
 
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="社区留言板"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/edittext"
+        android:layout_width="match_parent"
+        android:layout_height="141dp"
+        android:hint="请输入你的评价蹭课/推荐课程/发言内容..."
+        android:maxLines="4" />
+
+    <RadioGroup
+        android:id="@+id/rg"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+
+        <RadioButton
+            android:id="@+id/pjck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="评价蹭课" />
+
+
+        <RadioButton
+            android:id="@+id/tjkc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="推荐课程" />
+
+
+        <RadioButton
+            android:id="@+id/ptfy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="普通发言" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="提交" />
 
 </LinearLayout>
