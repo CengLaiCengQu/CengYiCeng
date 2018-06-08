@@ -3,7 +3,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.rubrub.Fragment.MeFragment">
+    tools:context="com.example.rubrub.Fragment.MeFragment"
+    android:weightSum="1"
+    android:orientation="horizontal">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/item_set"
+        android:text="设置"
+
+
+
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/item_look"
+        android:text="查看"
+
+        />
 
 
 
