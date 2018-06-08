@@ -6,10 +6,10 @@
 
 
     <Button
+        android:id="@+id/jump1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/jump1"
-        android:text="百度一下"/>
+        android:text="百度一下" />
 
     <Button
         android:id="@+id/jump2"
