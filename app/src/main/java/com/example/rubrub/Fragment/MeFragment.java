@@ -9,9 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 //import com.example.rubrub.setInformation
-import com.example.rubrub.MeActivity;
-import com.example.rubrub.Me_lookActivity;
-import com.example.rubrub.Me_setActivity;
+import com.example.rubrub.Activity.Me_lookActivity;
+import com.example.rubrub.Activity.Me_setActivity;
 import com.example.rubrub.R;
 
 

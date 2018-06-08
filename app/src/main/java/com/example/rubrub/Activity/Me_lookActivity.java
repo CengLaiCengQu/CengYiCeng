@@ -1,6 +1,8 @@
-package com.example.rubrub;
+package com.example.rubrub.Activity;
 
 import android.support.v4.app.FragmentActivity;
+
+import com.example.rubrub.R;
 
 /**
  * Created by wx‘mac pro on 2018/6/8.

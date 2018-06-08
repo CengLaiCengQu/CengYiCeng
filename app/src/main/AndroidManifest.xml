@@ -59,10 +59,10 @@
             android:name=".Activity.MeActivity"
             android:screenOrientation="portrait"></activity>
         <activity
-            android:name=".Me_lookActivity"
+            android:name=".Activity.Me_lookActivity"
             android:screenOrientation="portrait"></activity>
         <activity
-            android:name=".Me_setActivity"
+            android:name=".Activity.Me_setActivity"
             android:screenOrientation="portrait"></activity>
         <activity
             android:name=".LoginActivity"
