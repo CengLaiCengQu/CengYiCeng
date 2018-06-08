@@ -2,6 +2,7 @@ package com.example.rubrub;
 
 import android.content.Intent;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
@@ -18,9 +19,20 @@ import com.example.rubrub.Fragment.SearchFragment;
 import java.util.ArrayList;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends FragmentActivity {
 
 private BottomNavigationView bottomNavigationView;
+    private AnnouncementFragment announcementFragment;
+    private SearchFragment searchFragment;
+    private NeighbourFragment neighbourFragment;
+    private MeFragment meFragment;
+
+    public void replace(Fragment fragment){
+        FragmentManager manager = getSupportFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+        transaction.replace(R.id.search,fragment);
+        transaction.commit();
+    }
 
 
     @Override
@@ -34,43 +46,26 @@ private BottomNavigationView bottomNavigationView;
                 FragmentManager manager = getSupportFragmentManager();
                 FragmentTransaction transaction = manager.beginTransaction();
                 Fragment fragment = null;
-                ArrayList<Fragment> list = new ArrayList<>();
-                SearchFragment searchFragment =new SearchFragment();
-                AnnouncementFragment announcementFragment=new AnnouncementFragment();
-                NeighbourFragment neighbourFragment=new NeighbourFragment();
-                MeFragment meFragment =new MeFragment();
-                list.add(searchFragment);
-                list.add(announcementFragment);
-                list.add(neighbourFragment);
-                list.add(meFragment);
                 switch (item.getItemId()) {
                     case R.id.search:
-                        fragment = new SearchFragment();
-                        transaction.replace(R.id.search,fragment);
-                        transaction.commit();
+                        replace(new SearchFragment());
+                        //transaction.replace(R.id.search,searchFragment);
+                        //transaction.commit();
                         //Intent intent =new Intent(MainActivity.this,SearchActivity.class);
                         //startActivity(intent);
+                        //fragment = new SearchFragment();
+                        //transaction.add(R.id.search,fragment);
+                        //transaction.replace(R.id.search,fragment);
                         break;
                     case R.id.neighbour:
-                        //fragment = new NeighbourFragment();
-                        //transaction.replace(R.id.neighbour,fragment);
-                        //transaction.commit();
-                        //Intent intent1 =new Intent(MainActivity.this,NeighbourActivity.class);
-                        //startActivity(intent1);
+                          replace(new NeighbourFragment());
                         break;
                     case R.id.board:
-                        //fragment =new AnnouncementFragment();
-                        //transaction.replace(R.id.board,fragment);
-                        //transaction.commit();
-                        //Intent intent2 =new Intent(MainActivity.this,AnnouncementActivity.class);
-                        //startActivity(intent2);
+                        replace(new AnnouncementFragment());
                         break;
                     case R.id.me:
-                        //fragment = new MeFragment();
-                        //transaction.replace(R.id.me,fragment);
-                        //transaction.commit();
-                        //Intent intent3 =new Intent(MainActivity.this,MeActivity.class);
-                        //startActivity(intent3);
+                        replace(new MeFragment());
+
                         break;
                 }
                 return true;
@@ -78,5 +73,6 @@ private BottomNavigationView bottomNavigationView;
         });
 
     }
+
 
 }

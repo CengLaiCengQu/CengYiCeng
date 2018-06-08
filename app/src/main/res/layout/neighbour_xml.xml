@@ -3,4 +3,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <fragment
+        android:id="@+id/neighbour_container"
+        android:name="com.example.rubrub.Fragment.NeighbourFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </fragment>
+
 </LinearLayout>

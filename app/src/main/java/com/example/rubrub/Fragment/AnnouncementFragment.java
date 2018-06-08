@@ -6,10 +6,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.example.rubrub.R;
 
 public class AnnouncementFragment extends Fragment {
+
+    private Button button1;
+    private Button button2;
 
     private AppCompatActivity appCompatActivity;
 
