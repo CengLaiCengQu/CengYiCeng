@@ -5,23 +5,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.rubrub.Fragment.MeFragment"
     android:weightSum="1"
-    android:orientation="horizontal">
+    android:orientation="vertical"
+    android:baselineAligned="false">
 
     <Button
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:id="@+id/item_set"
         android:text="设置"
 
         />
+
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/item_look"
-        android:text="查看"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:id="@+id/item_looklike"
+        android:text="查看偏好课程"
 
-        />
-
+        android:layout_weight="0.04" />
 
 
 </LinearLayout>
