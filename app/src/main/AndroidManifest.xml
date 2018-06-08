@@ -58,6 +58,15 @@
         <activity
             android:name=".Activity.MeActivity"
             android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".Me_lookActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".Me_setActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait"></activity>
         <activity android:name=".SetinformationActivity"></activity>
 
     </application>
