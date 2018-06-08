@@ -1,7 +1,6 @@
 package com.example.rubrub.Fragment;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.support.v4 .app.Fragment;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -10,13 +9,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.example.rubrub.Me_lookActivity;
-import com.example.rubrub.Me_setActivity;
+import com.example.rubrub.MeActivity;
 import com.example.rubrub.R;
+import com.example.rubrub.SetinformationActivity;
 
 public class MeFragment extends Fragment {
-    private Button button1;
-    private Button button2;
 
     private AppCompatActivity appCompatActivity;
 
@@ -31,21 +28,26 @@ public class MeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         View view =inflater.inflate(R.layout.me_fragment_xml,container,false);
-        return view;
-    }
+
+            return view;//这里别忘记了将上面的view返回
+        }
+    @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        button1 = (Button) getActivity().findViewById(R.id.item_set);
 
-        button2 = (Button) getActivity().findViewById(R.id.item_look);
+        Button button1 = (Button)getActivity(). findViewById(R.id.item_set);
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity() , SetinformationActivity.class);
+                getActivity().startActivity(intent);
+
+            }
+        });
     }
-    public void Set(View v){
-        Intent intent1 = new Intent(this.getContext(), Me_setActivity.class);
-        startActivity(intent1);
-    }
-    public void Look(View v){
-        Intent intent2 = new Intent(this.getContext(),Me_lookActivity.class);
-        startActivity(intent2);
-    }
+
+
+
 
 }
+

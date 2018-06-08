@@ -1,25 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.rubrub.Fragment.MeFragment"
     android:weightSum="1"
-    tools:context="com.example.rubrub.Fragment.MeFragment">
+    android:orientation="vertical"
+    android:baselineAligned="false">
 
     <Button
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
         android:id="@+id/item_set"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="Set"
-        android:text="设置个人信息" />
+        android:text="设置"
+
+        />
 
     <Button
-        android:id="@+id/item_look"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="Look"
-        android:text="查看偏好课程" />
+        android:layout_height="63dp"
+        android:id="@+id/item_looklike"
+        android:text="查看偏好课程"
+
+        android:layout_weight="0.04" />
 
 
 </LinearLayout>
