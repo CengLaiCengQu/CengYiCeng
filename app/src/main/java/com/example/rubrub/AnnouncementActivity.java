@@ -31,7 +31,7 @@ public class AnnouncementActivity extends FragmentActivity {
          @Override
          public void onClick(View v) {
              Intent intent = new Intent(Intent.ACTION_VIEW);
-             intent.setData(Uri.parse("http://www.hzau.com"));
+             intent.setData(Uri.parse("http://jwc.hzau.edu.cn"));
              startActivity(intent);
          }
      });
