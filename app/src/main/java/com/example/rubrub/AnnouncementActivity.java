@@ -15,26 +15,6 @@ public class AnnouncementActivity extends FragmentActivity {
     protected void onCreate(android.os.Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.announcement_xml);
-        button1 = (Button) findViewById(R.id.jump1);
-        button1.setOnClickListener(new View.OnClickListener() {
-                                       @Override
-                                       public void onClick(View v) {
-                                           Intent intent = new Intent(Intent.ACTION_VIEW);
-                                           intent.setData(Uri.parse("http://www.baidu.com"));
-                                           startActivity(intent);
-                                       }
-                                   }
-        );
-
-    button2 = (Button) findViewById(R.id.jump2);
-     button2.setOnClickListener(new View.OnClickListener() {
-         @Override
-         public void onClick(View v) {
-             Intent intent = new Intent(Intent.ACTION_VIEW);
-             intent.setData(Uri.parse("http://jwc.hzau.edu.cn"));
-             startActivity(intent);
-         }
-     });
 
     }
 }
