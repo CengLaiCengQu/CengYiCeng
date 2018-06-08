@@ -1,5 +1,6 @@
-package com.example.rubrub;
+package com.example.rubrub.Activity;
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -9,14 +10,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.rubrub.R;
+
 import cn.bmob.sms.BmobSMS;
 import cn.bmob.sms.exception.BmobException;
 import cn.bmob.sms.listener.RequestSMSCodeListener;
 import cn.bmob.sms.listener.VerifySMSCodeListener;
-//import cn.bmob.v3.BmobSMS;
-import rx.Subscription;
-
-import static cn.bmob.sms.BmobSMS.initialize;
 
 /**
  * Created by wx‘mac pro on 2018/5/31.
@@ -74,7 +73,7 @@ public void onClick(View v) {
         Log.e("MESSAGE:", "3");
         //进行获取验证码操作和倒计时1分钟操作
         BmobSMS.requestSMSCode( this,userName, "蹭一蹭", new RequestSMSCodeListener() {
-@Override
+     @Override
 public void done(Integer integer, BmobException e) {
         if (e == null) {
         //发送成功时，让获取验证码按钮不可点击，且为灰色
@@ -130,6 +129,8 @@ public void onFinish() {
                     if (e == null) {
                         Log.e("MESSAGE:", "7");
                         Toast.makeText(LoginActivity.this, "登录成功", Toast.LENGTH_SHORT).show();
+                            Intent intent =new Intent(LoginActivity.this,MainActivity.class);
+                            startActivity(intent);
                     } else {
                         Log.e("MESSAGE:", "8");
                         Toast.makeText(LoginActivity.this, "验证码错误", Toast.LENGTH_SHORT).show();
