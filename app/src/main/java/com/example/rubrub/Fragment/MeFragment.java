@@ -8,10 +8,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-
+//import com.example.rubrub.setInformation
 import com.example.rubrub.MeActivity;
+import com.example.rubrub.Me_lookActivity;
+import com.example.rubrub.Me_setActivity;
 import com.example.rubrub.R;
-import com.example.rubrub.SetinformationActivity;
+
 
 public class MeFragment extends Fragment {
 
@@ -39,7 +41,16 @@ public class MeFragment extends Fragment {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity() , SetinformationActivity.class);
+                Intent intent = new Intent(getActivity() , Me_setActivity.class);
+                getActivity().startActivity(intent);
+
+            }
+        });
+        Button button2 = (Button)getActivity(). findViewById(R.id.item_looklike);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity() , Me_lookActivity.class);
                 getActivity().startActivity(intent);
 
             }

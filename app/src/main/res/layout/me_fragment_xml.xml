@@ -9,20 +9,20 @@
     android:baselineAligned="false">
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
         android:id="@+id/item_set"
-        android:text="设置"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="设置个人信息"
 
         />
 
     <Button
         android:layout_width="match_parent"
-        android:layout_height="63dp"
+        android:layout_height="wrap_content"
         android:id="@+id/item_looklike"
         android:text="查看偏好课程"
 
-        android:layout_weight="0.04" />
+     />
 
 
 </LinearLayout>
