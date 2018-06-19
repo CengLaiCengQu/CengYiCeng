@@ -7,7 +7,7 @@ import cn.bmob.v3.BmobObject;
  */
 
 public class MyClass extends BmobObject {
-    private String objectId;
+    //private String objectId;
     private String Uname;
     private String Cnumber;
     private String college;
