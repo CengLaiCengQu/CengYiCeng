@@ -35,6 +35,7 @@ public class NeighbourFragment  extends Fragment{
         super.onActivityCreated(savedInstanceState);
         Button button = (Button) getActivity().findViewById(R.id.button);
         edittext = (EditText) getActivity().findViewById(R.id.edittext);
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
