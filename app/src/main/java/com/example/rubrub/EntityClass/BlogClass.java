@@ -1,5 +1,6 @@
 package com.example.rubrub.EntityClass;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import cn.bmob.v3.BmobObject;
@@ -8,8 +9,8 @@ import cn.bmob.v3.BmobObject;
  * Created by wx‘mac pro on 2018/6/8.
  */
 
-public class BlogClass extends BmobObject {
-    private String objectId;
+public class BlogClass extends BmobObject implements Serializable{
+   // private transient String objectId;
     private String Uname;
     private String Uid;
     private Date time;
