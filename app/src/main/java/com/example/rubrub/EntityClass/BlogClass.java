@@ -15,6 +15,7 @@ public class BlogClass extends BmobObject implements Serializable{
     private String Uid;
     private Date time;
     private String MicroBlog;
+    int searchused;
 
     public String getUname() {
         return Uname;
@@ -47,4 +48,7 @@ public class BlogClass extends BmobObject implements Serializable{
     public void setMicroBlog(String microBlog) {
         this.MicroBlog = microBlog;
     }
+    public void setSearchused(int num){searchused = num;}
+
+    //public int getSearchused(){return searchused;}
 }
