@@ -34,14 +34,14 @@ public class Me_setActivity extends FragmentActivity  {
     EditText edit_name, edit_collage;
     Button btn_back, btn_true;
     TextView tv_add;
-    String old_name = "";
-    String old_collage = "";
-    String name = "";
-    String collage = "";
+   // String old_name = "";
+    //String old_collage = "";
+    String name ;
+    String collage ;
     protected int mScreenWidth;
     protected int mScreenHeight;
 
-    public static final String TAG = "bmob";
+    //public static final String TAG = "bmob";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,11 +57,10 @@ public class Me_setActivity extends FragmentActivity  {
         getWindowManager().getDefaultDisplay().getMetrics(metric);
         mScreenWidth = metric.widthPixels;
         mScreenHeight = metric.heightPixels;
-
         setContentView();
         initViews();
         initListeners();
-        initData();
+      //  initData();
     }
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
@@ -103,19 +102,19 @@ public class Me_setActivity extends FragmentActivity  {
     }
 
     // @Override
-    public void initData() {
+   // public void initData() {
         // TODO Auto-generated method stub
 
-        old_name = getIntent().getStringExtra("name");
-        old_collage = getIntent().getStringExtra("collage");
-        edit_name.setText(old_name);
-        edit_collage.setText(old_collage);
+        //old_name = getIntent().getStringExtra("name");
+       // old_collage = getIntent().getStringExtra("collage");
+      //  edit_name.setText(old_name);
+        //edit_collage.setText(old_collage);
         // if (from.equals("Lost")) {
         //  tv_add.setText("添加失物信息");
         // } else {
         // tv_add.setText("添加招领信息");
         //  }
-    }
+   // }
 
     //@Override
     /*public void onClick(View v) {
@@ -180,7 +179,7 @@ public class Me_setActivity extends FragmentActivity  {
 
     }
 
-    private void addmyclass() {
+  /*  private void addmyclass() {
         MyClass myClass = new MyClass();
         myClass.setUname(name);
         myClass.setCollege(collage);
@@ -202,7 +201,7 @@ public class Me_setActivity extends FragmentActivity  {
             }
         });
         //return;
-    }
+    }*/
 
 
   /*  Toast mToast;
