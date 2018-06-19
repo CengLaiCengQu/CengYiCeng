@@ -32,7 +32,7 @@ public class NeighbourFragment  extends Fragment{
     private RadioGroup rg;
     private Button button;
     private TextView textView;
-    private String str;//标示选择了哪一种类型的发言
+    private String str;//标示选择了哪一种类型的发言。
     String inputText;//存放用户输入的发言内容
     String outputText;//存放将要显示的内容
     String time;
