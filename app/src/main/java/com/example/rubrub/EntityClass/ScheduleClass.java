@@ -7,7 +7,7 @@ import cn.bmob.v3.BmobObject;
  */
 
 public class ScheduleClass extends BmobObject {
-    //private String objectId;
+  //  private transient String objectId;
     private String Semester;
     private String Cname;
     private String Cnumber;
