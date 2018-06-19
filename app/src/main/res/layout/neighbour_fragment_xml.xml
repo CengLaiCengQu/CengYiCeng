@@ -6,18 +6,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.rubrub.Fragment.NeighbourFragment">
 
-    <TextView
-        android:id="@+id/text_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="社区留言板"
-        android:textSize="24sp" />
-
     <EditText
         android:id="@+id/edittext"
         android:layout_width="match_parent"
         android:layout_height="141dp"
-        android:hint="请输入你的评价蹭课/推荐课程/发言内容..."
+        android:hint="请输入你的评价蹭课/推荐蹭课/发言内容..."
         android:maxLines="4" />
 
     <RadioGroup
@@ -25,14 +18,16 @@
         android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
-
-
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发言类别："/>
         <RadioButton
             android:id="@+id/pjck"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
-            android:text="评价蹭课" />
+            android:text="评价课程" />
 
 
         <RadioButton
@@ -48,11 +43,19 @@
             android:layout_height="wrap_content"
             android:text="普通发言" />
     </RadioGroup>
-
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="提交" />
-
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="24sp" />
+    </ScrollView>
 </LinearLayout>
