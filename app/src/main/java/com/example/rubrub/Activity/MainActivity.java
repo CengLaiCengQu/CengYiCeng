@@ -55,6 +55,7 @@ private BottomNavigationView bottomNavigationView;
         Bmob.initialize(this, "14b82d3140bd6401d0584482b4015795");
         // 注:自v3.5.2开始，数据sdk内部缝合了统计sdk，开发者无需额外集成，传渠道参数即可，不传默认没开启数据统计功能
         //Bmob.initialize(this, "Your Application ID","bmob")
+        //Intent intent = new Intent(this,LoginActivity.class) ;
         setContentView(R.layout.activity_main);
         bottomNavigationView = (BottomNavigationView) findViewById(R.id.navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
