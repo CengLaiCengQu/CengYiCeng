@@ -33,9 +33,7 @@ public class BlogClass extends BmobObject implements Serializable{
         this.Uid = uid;
     }
 
-    public Date getTime() {
-        return time;
-    }
+    public Date getTime() { return time;}
 
     public void setTime(Date time) {
         this.time = time;
