@@ -17,7 +17,7 @@
     android:id="@+id/search_bytime"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="按上课时间查询课程" />
+    android:text="按课程名查询课程" />
 
     <Button
         android:id="@+id/search_byplace"

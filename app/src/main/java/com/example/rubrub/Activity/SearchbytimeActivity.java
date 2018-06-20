@@ -6,71 +6,78 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
-import android.widget.LinearLayout;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RelativeLayout;
 
-import com.example.rubrub.EntityClass.MyClass;
 import com.example.rubrub.EntityClass.ScheduleClass;
 import com.example.rubrub.R;
-import com.example.rubrub.View.SearchbytimeAdapter;
+import com.example.rubrub.View.SearchbyclassAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import cn.bmob.v3.BmobQuery;
-import cn.bmob.v3.datatype.BmobPointer;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.FindListener;
-import cn.bmob.v3.listener.QueryListener;
-import cn.bmob.v3.listener.SaveListener;
-
-import static cn.bmob.v3.b.From.e;
 
 public class SearchbytimeActivity extends AppCompatActivity  {
     private ArrayList<ScheduleClass>scheduleClassList=new ArrayList<>();
-    private SearchbytimeAdapter adapter;
+    private SearchbyclassAdapter adapter;
     public static final String TAG = "SearchbytimeActivity";
     private RelativeLayout noPlace;
     private ScheduleClass scheduleClass;
+    private EditText editText;
+    private String time;
+    private Button button;
     //private String Cteacher;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.searchbytime_xml);
-        RecyclerView recyclerView=(RecyclerView)findViewById(R.id.search_bytime);
-        LinearLayoutManager linearLayoutManager=new LinearLayoutManager(this);
+        setContentView(R.layout.searchbyclass_xml);
+        editText=findViewById(R.id.search_bytimeedit);
+        button=findViewById(R.id.surefor_time);
+        RecyclerView recyclerView=(RecyclerView)findViewById(R.id.searchbytime_list);
+        LinearLayoutManager linearLayoutManager=new LinearLayoutManager(SearchbytimeActivity.this);
         recyclerView.setLayoutManager(linearLayoutManager);
-        adapter=new SearchbytimeAdapter(scheduleClassList);
+        adapter=new SearchbyclassAdapter(scheduleClassList);
         recyclerView.setAdapter(adapter);
-        searchCname();
+        search();
     }
 
-    private void searchCname(){
-        BmobQuery<ScheduleClass> query = new BmobQuery<>();
-        //query.addWhereEqualTo("dish" , new BmobPointer(dish));
-        //query.include("place");
-        query.findObjects(new FindListener<ScheduleClass>() {
+
+    private void search(){
+        button.setOnClickListener(new View.OnClickListener(){
             @Override
-            public void done(List <ScheduleClass> list, BmobException e) {
-                try {
-                    adapter.getList().clear();
-                    if(e == null){
-                        adapter.getList().addAll(list);
-                        for(ScheduleClass x : adapter.getList()){
-                            //x.setDish(dish);
+            public void onClick(View v){
+                BmobQuery<ScheduleClass> query = new BmobQuery<>();
+                time=editText.getText().toString();
+                query.addWhereEqualTo("Cname" ,time);
+                //query.include("place");
+                query.findObjects(new FindListener<ScheduleClass>() {
+                    @Override
+                    public void done(List <ScheduleClass> list, BmobException e) {
+                        try {
+                            adapter.getList().clear();
+                            if(e == null){
+                                adapter.getList().addAll(list);
+                                for(ScheduleClass x : adapter.getList()){
+                                    //x.setDish(dish);
+                                }
+                                Log.i(TAG, "searchbytime:查询成功" + list.size());
+                                if(list.size() > 0)
+                                    Log.i(TAG, "searchbytime :查询成功" +
+                                            list.get(0).getCname());
+                            }else {
+                                Log.i(TAG, "searchbytime :查询失败" + e.getMessage());
+                            }
+                            notFoundAction();
+                            adapter.notifyDataSetChanged();
+                        } catch (Exception e1) {
+                            e1.printStackTrace();
                         }
-                        Log.i(TAG, "searchDishPlace :查询成功" + list.size());
-                        if(list.size() > 0)
-                            Log.i(TAG, "searchDishPlace :查询成功" +
-                                    list.get(0).getCname());
-                    }else {
-                        Log.i(TAG, "searchDishPlace :查询失败" + e.getMessage());
                     }
-                    notFoundAction();
-                    adapter.notifyDataSetChanged();
-                } catch (Exception e1) {
-                    e1.printStackTrace();
-                }
+                });
             }
         });
     }
@@ -83,3 +90,7 @@ public class SearchbytimeActivity extends AppCompatActivity  {
         }
     }
 }
+
+
+
+

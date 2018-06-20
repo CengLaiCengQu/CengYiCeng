@@ -4,25 +4,20 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-
     <EditText
-        android:id="@+id/search_byteacheredit"
+        android:id="@+id/search_bytimeedit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="请输入老师名字"/>
+        android:text="请输入课程名"/>
 
     <Button
-        android:id="@+id/surefor_teacher"
+        android:id="@+id/surefor_time"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="确认"/>
 
-
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/searchbyteacher_list"
+        android:id="@+id/searchbytime_list"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
-
-
-    </LinearLayout>
+        android:layout_height="wrap_content" />
+</LinearLayout>

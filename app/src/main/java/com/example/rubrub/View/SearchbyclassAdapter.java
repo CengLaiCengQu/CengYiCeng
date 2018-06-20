@@ -10,26 +10,27 @@ import android.widget.TextView;
 import com.example.rubrub.EntityClass.ScheduleClass;
 import com.example.rubrub.R;
 
-import java.lang.reflect.Type;
 import java.util.ArrayList;
-import java.util.List;
 
-public class SearchbytimeAdapter extends
-        RecyclerView.Adapter<SearchbytimeAdapter.ViewHolder> {
+public class SearchbyclassAdapter extends
+        RecyclerView.Adapter<SearchbyclassAdapter.ViewHolder> {
 
     private ArrayList<ScheduleClass>mScheduleclass;
     static class ViewHolder extends RecyclerView.ViewHolder{
-        TextView coursename;
+        TextView coursename,cousreteacher,coursetime,courseplace;
 
         public ViewHolder(View view){
             super(view);
             coursename=(TextView)view.findViewById(R.id.cname);
+            cousreteacher=(TextView)view.findViewById(R.id.cteacher);
+            coursetime=(TextView)view.findViewById(R.id.ctime);
+            courseplace=(TextView)view.findViewById(R.id.cplace);
 
         }
 
     }
 
-    public SearchbytimeAdapter(ArrayList<ScheduleClass>scheduleClass){
+    public SearchbyclassAdapter(ArrayList<ScheduleClass>scheduleClass){
         mScheduleclass=scheduleClass;
     }
 
@@ -44,6 +45,9 @@ public class SearchbytimeAdapter extends
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         ScheduleClass scheduleClass=mScheduleclass.get(position);
         holder.coursename.setText(scheduleClass.getCname());
+        holder.cousreteacher.setText(scheduleClass.getCteacher());
+        holder.coursetime.setText(scheduleClass.getCtime());
+        holder.courseplace.setText(scheduleClass.getCplace());
     }
 
     @Override
