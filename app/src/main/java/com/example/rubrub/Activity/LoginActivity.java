@@ -1,6 +1,7 @@
 package com.example.rubrub.Activity;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -21,7 +22,7 @@ import cn.bmob.sms.listener.VerifySMSCodeListener;
  * Created by wx‘mac pro on 2018/5/31.
  */
 
-public class LoginActivity extends Activity implements View.OnClickListener{
+public class LoginActivity extends Activity implements View.OnClickListener {
 //bmob初始化
     private EditText userName_et, passWord_et;
     private Button Message_btn, login_btn;
@@ -31,7 +32,7 @@ protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_xml);
 
-        initBomb();
+    initBomb();
         initView();
         initEvent();
         }
@@ -151,4 +152,5 @@ private void initView() {
 
 
 
-        }
+
+}

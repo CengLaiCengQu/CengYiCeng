@@ -3,6 +3,7 @@ package com.example.rubrub.Fragment;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,8 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.io.PrintStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -34,8 +37,9 @@ public class NeighbourFragment  extends Fragment{
     private TextView textView;
     String str;//标示选择了哪一种类型的发言。
     String inputText;//存放用户输入的发言内容
-    String outputText;//存放将要显示的内容
+    String outputText = "--------------------社区留言板--------------------";//存放将要显示的内容
     String time;
+    Date timea;//保存从数据库中读取到的时间
     private AppCompatActivity appCompatActivity;
 
     public AppCompatActivity getAppCompatActivity() {
@@ -54,6 +58,7 @@ public class NeighbourFragment  extends Fragment{
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         textView =(TextView) getActivity().findViewById(R.id.text_view);
+        textView.setMovementMethod(ScrollingMovementMethod.getInstance());
         BmobQuery<BlogClass> query = new BmobQuery<BlogClass>();
         //查询playerName叫“比目”的数据
         query.addWhereEqualTo("searchused", 1);
@@ -71,7 +76,10 @@ public class NeighbourFragment  extends Fragment{
                         //获得playerName的信息
                         outputText += bc.getUname();
                         //获得createdAt数据创建时间（注意是：createdAt，不是createAt）
-                        outputText += bc.getTime();
+                        timea = bc.getTime();
+                        SimpleDateFormat formattera = new SimpleDateFormat("yyyy年MM月dd日 HH:mm:ss");
+                        time = formattera.format(timea);
+                        outputText += time;
                         //获取留言
                         outputText += bc.getMicroBlog();
                         outputText += "\r\n";
@@ -144,6 +152,7 @@ public class NeighbourFragment  extends Fragment{
                                 }
                             }
                         });
+                        Toast.makeText(getActivity(), "你的留言已提交！感谢使用！", Toast.LENGTH_SHORT).show();
                 }
             }
         });
