@@ -14,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.rubrub.EntityClass.MyClass;
+import com.example.rubrub.Fragment.MeFragment;
 import com.example.rubrub.R;
 //import com.google.android.gms.appindexing.Action;
 //import com.google.android.gms.appindexing.AppIndex;
@@ -90,7 +91,10 @@ public class Me_setActivity extends FragmentActivity  {
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    finish();
+                MeFragment.setName(name);
+                MeFragment.setCollege(collage);
+                finish();
+
             }
         });
         btn_true.setOnClickListener(new View.OnClickListener() {
@@ -137,9 +141,11 @@ public class Me_setActivity extends FragmentActivity  {
           //  ShowToast("请填写昵称");
             return;
         }
-        else {
+        else{
             name = edit_name.getText().toString();
         }
+
+
         if (edit_collage.length()==0) {
             Toast toast=Toast.makeText(getApplicationContext(), "请填写院系", Toast.LENGTH_SHORT);
             toast.show();
@@ -167,7 +173,8 @@ public class Me_setActivity extends FragmentActivity  {
 
                 }else{
                     // ShowToast("失败");
-                    Toast.makeText(getApplicationContext(), "数据添加失败！", Toast.LENGTH_SHORT).show();
+                    Toast toast = Toast.makeText(getApplicationContext(), "数据添加失败！", Toast.LENGTH_SHORT);
+                    toast.show();
                     //Log.i("bmob","失败："+e.getMessage()+","+e.getErrorCode());
                 }
             }
