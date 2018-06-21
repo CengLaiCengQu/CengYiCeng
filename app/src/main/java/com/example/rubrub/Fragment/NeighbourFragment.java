@@ -37,7 +37,7 @@ public class NeighbourFragment  extends Fragment{
     private TextView textView;
     String str;//标示选择了哪一种类型的发言。
     String inputText;//存放用户输入的发言内容
-    String outputText = "--------------------社区留言板--------------------";//存放将要显示的内容
+    String outputText = "--------------------社区留言板--------------------";//存放将要显 示的内容
     String time;
     Date timea;//保存从数据库中读取到的时间
     private AppCompatActivity appCompatActivity;
