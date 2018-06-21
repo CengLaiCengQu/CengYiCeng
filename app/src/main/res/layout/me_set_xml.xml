@@ -51,7 +51,7 @@
         android:id="@+id/btn_back"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="取消"
+        android:text="返回"
         tools:layout_constraintTop_creator="1"
         tools:layout_constraintRight_creator="1"
         app:layout_constraintRight_toRightOf="@+id/edit_collage"

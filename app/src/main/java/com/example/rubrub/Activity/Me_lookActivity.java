@@ -7,8 +7,33 @@ import android.util.Log;
 
 import android.widget.TextView;
 
+import com.example.rubrub.EntityClass.BlogClass;
 import com.example.rubrub.EntityClass.MyClass;
 import com.example.rubrub.R;
+
+import java.text.SimpleDateFormat;
+import java.util.List;
+
+import cn.bmob.v3.BmobQuery;
+import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.FindListener;
+
+/**
+ * Created by wx‘mac pro on 2018/6/8.
+ */
+
+import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.text.method.ScrollingMovementMethod;
+import android.util.Log;
+
+import android.widget.TextView;
+
+import com.example.rubrub.EntityClass.BlogClass;
+import com.example.rubrub.EntityClass.MyClass;
+import com.example.rubrub.R;
+
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 import cn.bmob.v3.BmobQuery;
@@ -21,12 +46,12 @@ import cn.bmob.v3.listener.FindListener;
 
 public class Me_lookActivity extends FragmentActivity{
     private TextView textView;
-    private String outputText;
+    private String outputText="偏好课程为：";
     protected void onCreate(android.os.Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        textView =(TextView)findViewById(R.id.text_view);
-        textView.setMovementMethod(ScrollingMovementMethod.getInstance());
         setContentView(R.layout.me_look_xml);
+        textView =(TextView)findViewById(R.id.text_view1);
+        //textView.setMovementMethod(ScrollingMovementMethod.getInstance());
         //textView.setMovementMethod(ScrollingMovementMethod.getInstance());
         BmobQuery<MyClass> query = new BmobQuery<MyClass>();
         //查询playerName叫“比目”的数据
@@ -45,10 +70,6 @@ public class Me_lookActivity extends FragmentActivity{
                         //获得playerName的信息
                         outputText += bc.getUname();
                         //获得createdAt数据创建时间（注意是：createdAt，不是createAt）
-                        //timea = bc.getTime();
-                        // SimpleDateFormat formattera = new SimpleDateFormat("yyyy年MM月dd日 HH:mm:ss");
-                        // time = formattera.format(timea);
-                        //outputText += time;
                         //获取留言
                         outputText += bc.getKCname();
                         outputText += "\r\n";
@@ -59,6 +80,7 @@ public class Me_lookActivity extends FragmentActivity{
                 }
             }
         });
+
 
 
     }

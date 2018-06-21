@@ -126,4 +126,5 @@ public class MyClass extends BmobObject {
     public void setBookname(String bookname) {
         this.Bookname = bookname;
     }
+    public void setSearchused(int num){searchused = num;}
 }
