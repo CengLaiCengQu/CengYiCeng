@@ -21,6 +21,7 @@ public class MyClass extends BmobObject {
     private String type;
     private String Uid;
     private String Bookname;
+    private int searchused;
 
     public String getUname() {
         return Uname;
