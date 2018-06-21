@@ -16,7 +16,13 @@ public class AnnouncementFragment extends Fragment {
     private View view;
     private Button button1;
     private Button button2;
-
+    private Button button3;
+    private Button button4;
+    private Button button5;
+    private Button button6;
+    private Button button7;
+    private Button button8;
+    private Button button9;
     private AppCompatActivity appCompatActivity;
 
     public AppCompatActivity getAppCompatActivity() {
@@ -54,6 +60,69 @@ public class AnnouncementFragment extends Fragment {
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse("http://jwc.hzau.edu.cn"));
+                startActivity(intent);
+            }
+        });
+        button3 = (Button) getActivity().findViewById(R.id.jump3);
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("http://news.qq.com/"));
+                startActivity(intent);
+            }
+        });
+        button4 = (Button) getActivity().findViewById(R.id.jump4);
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("http://www.ifeng.com/"));
+                startActivity(intent);
+            }
+        });
+        button5 = (Button) getActivity().findViewById(R.id.jump5);
+        button5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("https://jwc.hzau.edu.cn//"));
+                startActivity(intent);
+            }
+        });
+        button6 = (Button) getActivity().findViewById(R.id.jump6);
+        button6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("http://ai.taobao.com/"));
+                startActivity(intent);
+            }
+        });
+        button7 = (Button) getActivity().findViewById(R.id.jump7);
+        button7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("https://weibo.com/"));
+                startActivity(intent);
+            }
+        });
+        button8 = (Button) getActivity().findViewById(R.id.jump8);
+        button8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("http://coi.hzau.edu.cn/"));
+                startActivity(intent);
+            }
+        });
+        button9 = (Button) getActivity().findViewById(R.id.jump9);
+        button9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("http://www.cnblogs.com/bestruangong/"));
                 startActivity(intent);
             }
         });

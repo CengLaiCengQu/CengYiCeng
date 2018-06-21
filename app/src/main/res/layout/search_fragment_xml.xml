@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/background1"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.rubrub.Fragment.SearchFragment">
 
@@ -11,23 +12,28 @@
         android:layout_height="wrap_content"
         android:text="请选择你要进行的搜索方式"
         android:textSize="30dp"
-        android:textColor="#FF4500"/>
+        android:textColor="#D15FEE"/>
 
   <Button
     android:id="@+id/search_bytime"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="按上课时间查询课程" />
+    android:text="按课程名查询课程" />
 
     <Button
         android:id="@+id/search_byplace"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="按上课地点查询课程"/>
 
     <Button
         android:id="@+id/search_byteacher"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="按上课老师查询课程"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/book"/>
 </LinearLayout>

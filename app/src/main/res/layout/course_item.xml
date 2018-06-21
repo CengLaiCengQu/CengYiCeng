@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
 
     <TextView
         android:id="@+id/cname"
@@ -9,4 +10,28 @@
         android:layout_height="wrap_content"
         android:text="cname"
         android:textSize="@dimen/text_size"/>
+
+    <TextView
+        android:id="@+id/cteacher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="cteacher"
+        android:textSize="@dimen/text_size"/>
+
+    <TextView
+        android:id="@+id/ctime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ctime"
+        android:textSize="@dimen/text_size" />
+
+    <TextView
+        android:id="@+id/cplace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="cplace"
+        android:textSize="@dimen/text_size"/>
+
+
+
 </LinearLayout>

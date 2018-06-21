@@ -10,40 +10,43 @@ import android.widget.TextView;
 import com.example.rubrub.EntityClass.ScheduleClass;
 import com.example.rubrub.R;
 
-import java.lang.reflect.Type;
 import java.util.ArrayList;
-import java.util.List;
 
-public class SearchbytimeAdapter extends
-        RecyclerView.Adapter<SearchbytimeAdapter.ViewHolder> {
-
-    private ArrayList<ScheduleClass>mScheduleclass;
+public class SearchbyteacherAdapter extends
+        RecyclerView.Adapter<SearchbyclassAdapter.ViewHolder> {
+    private ArrayList<ScheduleClass> mScheduleclass;
     static class ViewHolder extends RecyclerView.ViewHolder{
-        TextView coursename;
+        TextView coursename,courseteacher,coursetime,courseplace;
 
         public ViewHolder(View view){
             super(view);
             coursename=(TextView)view.findViewById(R.id.cname);
-
+            courseteacher=(TextView)view.findViewById(R.id.cteacher);
+            coursetime=(TextView)view.findViewById(R.id.ctime);
+            courseplace=(TextView)view.findViewById(R.id.cplace);
         }
 
     }
 
-    public SearchbytimeAdapter(ArrayList<ScheduleClass>scheduleClass){
+    public SearchbyteacherAdapter(ArrayList<ScheduleClass>scheduleClass){
         mScheduleclass=scheduleClass;
     }
 
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
+    public SearchbyclassAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.course_item,parent,false);
-        ViewHolder holder=new ViewHolder(view);
+        SearchbyclassAdapter.ViewHolder holder=new SearchbyclassAdapter.ViewHolder(view);
         return holder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull SearchbyclassAdapter.ViewHolder holder, int position) {
         ScheduleClass scheduleClass=mScheduleclass.get(position);
         holder.coursename.setText(scheduleClass.getCname());
+        holder.cousreteacher.setText(scheduleClass.getCteacher());
+        holder.coursetime.setText(scheduleClass.getCtime());
+        holder.courseplace.setText(scheduleClass.getCplace());
+
     }
 
     @Override
