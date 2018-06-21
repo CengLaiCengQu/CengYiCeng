@@ -6,13 +6,58 @@
     tools:context="com.example.rubrub.Fragment.MeFragment"
     android:weightSum="1"
     android:orientation="vertical"
-    android:baselineAligned="false">
+    android:baselineAligned="false"
+    android:background="@drawable/my_bakground">
+
+
+    <ImageView
+        android:id="@+id/touxiang"
+        android:layout_width="match_parent"
+        android:layout_height="91dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/my_photo" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:text="个人中心"
+        android:textSize="35sp" />
+
+    <LinearLayout
+        android:layout_width="361dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/collage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#608089"
+            android:text="name"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/nichen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="collage"
+            android:textColor="#608080"
+            android:textSize="30sp" />
+
+    </LinearLayout>
+
 
     <Button
         android:id="@+id/item_set"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="设置个人信息"
+        android:drawableRight="@drawable/me_goin"
+
 
         />
 
@@ -21,8 +66,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/item_looklike"
         android:text="查看偏好课程"
+       android:drawableRight="@drawable/me_goin"
 
-     />
+        />
 
 
 </LinearLayout>
